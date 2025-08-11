@@ -581,16 +581,24 @@ if (p.hasPermission("kitpvp.kit.ghast"))
 	       }  catch (ClassNotFoundException | NoClassDefFoundError e) {
 	           player.playSound(player.getLocation(), Sound.valueOf(soundName), volume, pitch);
 	       }
-	       NamespacedKey soundKey = NamespacedKey.fromString(soundName.toLowerCase());
-	       Sound sound = Registry.SOUNDS.get(soundKey);
-	       if (sound != null) {
-	           player.playSound(player.getLocation(), sound, volume, pitch); //
-	       } else {
-	           throw new IllegalArgumentException("[KP-PVP] INVALID SOUND NAME IN CONFIG!");
+	       if (clazz == null) {
+	    	   clazz = Class.forName("org.bukkit.Registry");        
 	       }
-	   } catch (IllegalArgumentException | NullPointerException e) {
+	           player.playSound(player.getLocation(), Sound.valueOf(soundName), volume, pitch); //
+	       
+	   } catch (IllegalArgumentException e) {
 	       Bukkit.getLogger().warning("[KP-PVP] INVALID SOUND NAME PARSED!");
+	       e.printStackTrace();
 	   }
+	   catch (NullPointerException e) {
+	       Bukkit.getLogger().warning("[KP-PVP] INVALID SOUND NAME PARSED!!");
+	       e.printStackTrace();
+	   } catch (ClassNotFoundException e) {
+		// TODO Auto-generated catch block
+
+	       Bukkit.getLogger().warning("[KP-PVP] INVALID SOUND NAME PARSED!!!");
+	       e.printStackTrace();
+	}
 	   }
 /*     */ 
 /*     */   @EventHandler

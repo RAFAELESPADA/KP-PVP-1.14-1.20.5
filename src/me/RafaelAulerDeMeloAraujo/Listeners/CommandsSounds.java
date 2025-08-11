@@ -27,7 +27,7 @@ import me.RafaelAulerDeMeloAraujo.SpecialAbility.NewKitMenu;
 /*    */   {
 /* 29 */     if (this.main.getConfig().getString("EnableSoundsToAllCommands").equalsIgnoreCase("true")) {
 /* 30 */      
-	/*  54 */         NewKitMenu.playSound(e.getPlayer(), this.main.getConfig().getString("Sound.CommandSounds"), 1.0F, 1.0F);
+	/*  54 */         NewKitMenu.playSound(e.getPlayer(), "UI_BUTTON_CLICK", 1.0F, 1.0F);
 /*    */   }
 }
 /*    */ }
