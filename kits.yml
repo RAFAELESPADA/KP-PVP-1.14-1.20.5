@@ -41,6 +41,7 @@ AntiStomperLore: '&7Immune to stompers'
 ShielderLore: '&7Receives a shield and netherite sword'
 MilkmanLore: '&7Gets stronger with your milk'
 GhastLore: '&7Throw fireballs'
+TamerLore: '&7Spawn 4 dogs to fight for you!'
 
 #Modify the cooldown of some kits
 #They are in seconds
@@ -59,10 +60,12 @@ NinjaCooldown: 10
 MonkCooldown: 25
 GhastCooldown: 30
 GladiatorCooldown: 40
+TamerCooldown: 45
 
 
 #Disable kits here
 
+TamerDisabled: false
 GladiatorDisabled: false
 GhastDisabled: false
 PhantomDisabled: false
@@ -114,6 +117,7 @@ NarutoSpeedAmplifier: 1
 NarutoRegenAmplifier: 2
 GhastFireballs: 6
 NarutoRegenTime: 15
+TamerDogsLastsFor: 15
 NarutoSpeedTime: 15
 FiremanWeaknessonWaterTime: 3
 FiremanWeaknessonWaterAmplifier: 1

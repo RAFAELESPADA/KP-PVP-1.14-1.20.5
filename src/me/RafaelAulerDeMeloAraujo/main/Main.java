@@ -112,6 +112,7 @@ import me.RafaelAulerDeMeloAraujo.SpecialAbility.Sonic;
 /*     */ import me.RafaelAulerDeMeloAraujo.SpecialAbility.Sponge;
 /*     */ import me.RafaelAulerDeMeloAraujo.SpecialAbility.Stomper;
 /*     */ import me.RafaelAulerDeMeloAraujo.SpecialAbility.StomperKITCOMMAND;
+import me.RafaelAulerDeMeloAraujo.SpecialAbility.Tamer;
 /*     */ import me.RafaelAulerDeMeloAraujo.SpecialAbility.Thor;
 /*     */ import me.RafaelAulerDeMeloAraujo.SpecialAbility.ThorKITCOMMAND;
 /*     */ import me.RafaelAulerDeMeloAraujo.SpecialAbility.TimeLord;
@@ -513,7 +514,7 @@ getCommand("kshielder").setExecutor(new Shielder(this));
 /* 220 */     getCommand("kpstats").setExecutor(new KPStats());
 /* 221 */     getCommand("kitmenu").setExecutor(new Menu(this));
 /* 222 */     getCommand("kitpvp").setExecutor(new Join());
-/*     */     
+/*     */         getCommand("ktamer").setExecutor(new Tamer(this));
 /*     */   getCommand("setarena").setExecutor(new SetArena());
 /* 225 */     getCommand("kpkits").setExecutor(new Menu(this));
               getCommand("kpkickall").setExecutor(new KPKICK());
@@ -582,7 +583,7 @@ private void startUpdating() {
               this.pm.registerEvents(new WarpMenu(), this);
               this.pm.registerEvents(new Sumo(this), this);
               this.pm.registerEvents(new Ghast(), this);
-
+              this.pm.registerEvents(new Tamer(this), this);
               this.pm.registerEvents(new Recraft(), this);
               this.pm.registerEvents(new Anchor(this), this);
               this.pm.registerEvents(new ConfuserHability(this), this);

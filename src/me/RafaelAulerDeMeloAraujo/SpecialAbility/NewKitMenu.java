@@ -66,11 +66,6 @@ kits.clear();
 	/* 234 */       
 	/* 235 */       
 
-
-	/* 239 */       
-	/* 240 */       
-	/* 241 */       
-	/* 248 */       kits.setItem(42, vidro1);
 	/* 249 */       kits.setItem(43, vidro1);
 	/* 250 */       kits.setItem(44, vidro1);
 	/* 251 */       kits.setItem(45, vidro1);
@@ -205,6 +200,18 @@ kits.clear();
 	/* 395 */         metapyro.setLore(indiob);
 	/* 396 */         pyro.setItemMeta(metapyro);
 	/* 397 */         kits.addItem(new ItemStack[] { pyro });
+	/*     */       }
+	if (p.hasPermission("kitpvp.kit.tamer"))
+	/*     */       {
+	/* 555 */         ItemStack pyro = new ItemStack(Material.BONE);
+	/* 556 */         ItemMeta metapyro = pyro.getItemMeta();
+	/* 557 */         metapyro.setDisplayName("§7Kit §e§lTamer");
+	/* 558 */         ArrayList indiob = new ArrayList();
+	/* 559 */         indiob.add((Main.kits.getString("TamerLore")).replace("&", "§"));
+	/* 560 */         
+	/* 561 */         metapyro.setLore(indiob);
+	/* 562 */         pyro.setItemMeta(metapyro);
+	/* 563 */         kits.addItem(new ItemStack[] { pyro });
 	/*     */       }
 	/* 399 */       if (p.hasPermission("kitpvp.kit.doublejump")) {
 	/* 400 */         ItemStack pyro = new ItemStack(Material.CHAINMAIL_BOOTS);
@@ -818,6 +825,11 @@ if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§7Kit §e§lMilkMan"
 /* 191 */         if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§7Kit §e§lMonk"))
 /*     */         {
 /* 193 */           Bukkit.dispatchCommand(p, "kmonk");
+/* 194 */           p.closeInventory();
+/*     */         }
+if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§7Kit §e§lTamer"))
+/*     */         {
+/* 193 */           Bukkit.dispatchCommand(p, "ktamer");
 /* 194 */           p.closeInventory();
 /*     */         }
 /* 191 */         if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§7Kit §e§lResouper"))
