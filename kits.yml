@@ -42,12 +42,14 @@ ShielderLore: '&7Receives a shield and netherite sword'
 MilkmanLore: '&7Gets stronger with your milk'
 GhastLore: '&7Throw fireballs'
 TamerLore: '&7Spawn 4 dogs to fight for you!'
+HedgeHogLore: '&7Shoot arrows in all directions'
 
 #Modify the cooldown of some kits
 #They are in seconds
 
 GladiatorHasCooldown: true
 
+HedgeHogCooldown: 30
 StomperCooldown: 30
 ThorCooldown: 5
 TimelordCooldown: 30
@@ -65,6 +67,8 @@ TamerCooldown: 45
 
 #Disable kits here
 
+
+HedgehogDisabled: false
 TamerDisabled: false
 GladiatorDisabled: false
 GhastDisabled: false

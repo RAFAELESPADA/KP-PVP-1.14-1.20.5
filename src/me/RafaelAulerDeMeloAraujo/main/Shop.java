@@ -73,6 +73,7 @@ public class Shop
     createButton(Material.MILK_BUCKET, shop, 38, "§6-> §cMilkMan", Main.messages.getString("ShopPriceLore").replace("&", "§") + " 8000");
     createButton(Material.NETHERITE_HELMET, shop, 39, "§6-> §cAntiStomper", Main.messages.getString("ShopPriceLore").replace("&", "§") + " 8000");
     createButton(Material.GHAST_TEAR, shop, 40, "§6-> §cGhast", Main.messages.getString("ShopPriceLore").replace("&", "§") + " 18000");
+    createButton(Material.ARROW, shop, 41, "§6-> §cHedgeHog", Main.messages.getString("ShopPriceLore").replace("&", "§") + " 18000");
     createButton(Material.BARRIER, shop, 53, "§4§l-> §cClose", Main.messages.getString("CloseShopLore").replace("&", "§"));
   }
   
@@ -667,6 +668,31 @@ public class Shop
       	}
       	Coins.perms.playerAdd(p, "kitpvp.kit.ghast");
           p.sendMessage("§6-> §cYou buy the Ghast kit §e-18000 coins");
+          Coins.removeCoins(p, 18000);
+          e.setCancelled(true);
+          p.closeInventory();
+        }
+        else if (Coins.getCoins(p) < 18000)
+        {
+          p.sendMessage(Main.messages.getString("NoFundsShop").replace("&", "§"));
+          e.setCancelled(true);
+          p.closeInventory();
+        }
+      }
+    if ((clicked.getType() == Material.ARROW)) {
+        if (Coins.getCoins(p) >= 18000)
+        {
+      	  if (p.hasPermission("kitpvp.kit.hedgehog")) {
+      		  p.sendMessage("§e[KitPvP] §cYou already have the Kit HedgeHog!");
+          		p.closeInventory();
+          		return;
+        	}
+      	if (Main.kits.getBoolean("HedgehogDisabled")) {
+      		p.sendMessage(API.NomeServer + ChatColor.RED + "The HedgeHog kit is disabled, sorry");
+      		return;
+      	}
+      	Coins.perms.playerAdd(p, "kitpvp.kit.hedgehog");
+          p.sendMessage("§6-> §cYou buy the Hedgehog kit §e-18000 coins");
           Coins.removeCoins(p, 18000);
           e.setCancelled(true);
           p.closeInventory();

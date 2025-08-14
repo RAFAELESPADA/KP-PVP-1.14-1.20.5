@@ -130,6 +130,18 @@ kits.clear();
 	/* 312 */         pyro.setItemMeta(metapyro);
 	/* 313 */         kits.addItem(new ItemStack[] { pyro });
 	/*     */       }
+	/* 303 */       if (p.hasPermission("kitpvp.kit.hedgehog")) {
+	/* 304 */         ItemStack pyro = new ItemStack(Material.ARROW);
+	/*     */         
+	/* 306 */         ItemMeta metapyro = pyro.getItemMeta();
+	/* 307 */         metapyro.setDisplayName("§7Kit §e§lHedgeHog");
+	/* 308 */         ArrayList indiob = new ArrayList();
+	/* 309 */         indiob.add(Main.kits.getString("HedgeHogLore").replace("&", "§"));
+	/* 310 */         
+	/* 311 */         metapyro.setLore(indiob);
+	/* 312 */         pyro.setItemMeta(metapyro);
+	/* 313 */         kits.addItem(new ItemStack[] { pyro });
+	/*     */       }
 	/* 315 */       if (p.hasPermission("kitpvp.kit.snail")) {
 	/* 316 */         ItemStack pyro = new ItemStack(Material.FERMENTED_SPIDER_EYE);
 	/* 317 */         ItemMeta metapyro = pyro.getItemMeta();
@@ -647,6 +659,11 @@ if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§7Kit §e§lWarper")
 /*  76 */         if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§7Kit §e§lKangaroo"))
 /*     */         {
 /*  78 */           Bukkit.dispatchCommand(p, "kangaroo");
+/*  79 */           p.closeInventory();
+/*     */         }
+if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§7Kit §e§lHedgeHog"))
+/*     */         {
+/*  78 */           Bukkit.dispatchCommand(p, "khedgehog");
 /*  79 */           p.closeInventory();
 /*     */         }
 /*  81 */         if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§7Kit §e§lFisherman"))
