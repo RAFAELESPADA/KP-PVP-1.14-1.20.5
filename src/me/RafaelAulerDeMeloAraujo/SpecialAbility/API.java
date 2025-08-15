@@ -76,7 +76,7 @@ public class API
     		   /* 46 */       ItemMeta souperaa = dima.getItemMeta();
     		   /* 47 */       souperaa.setDisplayName("§cSword");
     		   /* 48 */       dima.setItemMeta(souperaa);
-    		                  dima.addEnchantment(Enchantment.SHARPNESS, 1);
+    		                  dima.addEnchantment(Enchantment.DAMAGE_ALL, 1);
     		                  p.getInventory().setItem(0 , dima);
    	    }
     	   public static void sopak(final Player p) {
@@ -102,7 +102,7 @@ public class API
 
 		        // Check for a public method
 		        try {
-		            Method publicMethod = clazz2.getMethod("MAX_HEALTH");
+		            Method publicMethod = clazz2.getMethod("GENERIC_MAX_HEALTH");
 
 		            Bukkit.getLogger().info("[KP-PVP - DEBUG] publicMethod MAX_HEALTH exists: " + (publicMethod != null));
 		        } catch (NoSuchMethodException e) {
@@ -110,7 +110,7 @@ public class API
 		        	  o.setHealth(o.getMaxHealth());
 		        	  return;
 		        }
-			 o.setHealth(o.getAttribute(Attribute.MAX_HEALTH).getDefaultValue());
+			 o.setHealth(o.getAttribute(Attribute.GENERIC_MAX_HEALTH).getDefaultValue());
 		}
 	    public static void tirarArmadura(final Player p) {
 	        p.getInventory().setHelmet(new ItemStack(Material.AIR));
@@ -136,22 +136,22 @@ public class API
 public static void tirarEfeitos(final Player p) {
     p.removePotionEffect(PotionEffectType.ABSORPTION);
     p.removePotionEffect(PotionEffectType.BLINDNESS);
-    p.removePotionEffect(PotionEffectType.NAUSEA);
-    p.removePotionEffect(PotionEffectType.RESISTANCE);
-    p.removePotionEffect(PotionEffectType.MINING_FATIGUE);
+    p.removePotionEffect(PotionEffectType.CONFUSION);
+    p.removePotionEffect(PotionEffectType.DAMAGE_RESISTANCE);
+    p.removePotionEffect(PotionEffectType.SLOW_DIGGING);
     p.removePotionEffect(PotionEffectType.FIRE_RESISTANCE);
-    p.removePotionEffect(PotionEffectType.INSTANT_DAMAGE);
-    p.removePotionEffect(PotionEffectType.INSTANT_HEALTH);
+    p.removePotionEffect(PotionEffectType.HARM);
+    p.removePotionEffect(PotionEffectType.HEAL);
     p.removePotionEffect(PotionEffectType.HEALTH_BOOST);
     p.removePotionEffect(PotionEffectType.HUNGER);
-    p.removePotionEffect(PotionEffectType.STRENGTH);
+    p.removePotionEffect(PotionEffectType.INCREASE_DAMAGE);
     p.removePotionEffect(PotionEffectType.INVISIBILITY);
-    p.removePotionEffect(PotionEffectType.JUMP_BOOST);
+    p.removePotionEffect(PotionEffectType.JUMP);
     p.removePotionEffect(PotionEffectType.NIGHT_VISION);
     p.removePotionEffect(PotionEffectType.POISON);
     p.removePotionEffect(PotionEffectType.REGENERATION);
     p.removePotionEffect(PotionEffectType.SATURATION);
-    p.removePotionEffect(PotionEffectType.SLOWNESS);
+    p.removePotionEffect(PotionEffectType.SLOW);
     p.removePotionEffect(PotionEffectType.SPEED);
     p.removePotionEffect(PotionEffectType.WATER_BREATHING);
     p.removePotionEffect(PotionEffectType.WEAKNESS);

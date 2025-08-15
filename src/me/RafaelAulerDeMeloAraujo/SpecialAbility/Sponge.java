@@ -73,7 +73,7 @@ public void RemoverDan2o(EntityDamageEvent e)
 	      /* 46 */       ItemMeta souperaa = dima.getItemMeta();
 	      /* 47 */       souperaa.setDisplayName("§cSword");
 	      /* 48 */       dima.setItemMeta(souperaa);
-	                     dima.addEnchantment(Enchantment.SHARPNESS, 1);
+	                     dima.addEnchantment(Enchantment.DAMAGE_ALL, 1);
 	                     
 	      /* 49 */       ItemStack sopa = new ItemStack(Material.MUSHROOM_STEW);
 	      /* 50 */       ItemMeta sopas = sopa.getItemMeta();

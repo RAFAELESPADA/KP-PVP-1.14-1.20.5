@@ -308,7 +308,7 @@ kits.clear();
 	/* 477 */         kits.addItem(new ItemStack[] { pyro });
 	/*     */       }
 	if (p.hasPermission("kitpvp.kit.antistomper")) {
-	/* 469 */         ItemStack pyro = new ItemStack(Material.NETHERITE_HELMET);
+	/* 469 */         ItemStack pyro = new ItemStack(Material.GOLDEN_HELMET);
 	/* 470 */         ItemMeta metapyro = pyro.getItemMeta();
 	/* 471 */         metapyro.setDisplayName("§7Kit §e§lAntiStomper");
 	/* 472 */         ArrayList indiob = new ArrayList();
@@ -1126,7 +1126,7 @@ if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§7Kit §e§lTamer"))
 /* 477 */         kits.addItem(new ItemStack[] { pyro });
 /*     */       }
 if (p.hasPermission("kitpvp.kit.antistomper")) {
-/* 469 */         ItemStack pyro = new ItemStack(Material.NETHERITE_HELMET);
+/* 469 */         ItemStack pyro = new ItemStack(Material.GOLDEN_HELMET);
 /* 470 */         ItemMeta metapyro = pyro.getItemMeta();
 /* 471 */         metapyro.setDisplayName("§7Kit §e§lAntiStomper");
 /* 472 */         ArrayList indiob = new ArrayList();

@@ -187,21 +187,21 @@ if (!Main.getInstance().getConfig().getBoolean("DisableShopItem")) {
 /* 134 */         s.removePotionEffect(effect.getType());
 /*     */       }
 /* 136 */       ItemStack sword = new ItemStack(Material.DIAMOND_SWORD);
-/* 137 */       sword.addEnchantment(Enchantment.SHARPNESS, 1);
+/* 137 */       sword.addEnchantment(Enchantment.DAMAGE_ALL, 1);
 /* 138 */       ItemStack colete = new ItemStack(Material.IRON_CHESTPLATE);
-/* 139 */       colete.addEnchantment(Enchantment.PROTECTION, 1);
-/* 140 */       colete.addEnchantment(Enchantment.UNBREAKING, 3);
+/* 139 */       colete.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1);
+/* 140 */       colete.addEnchantment(Enchantment.DURABILITY, 3);
 /* 141 */       colete1 = new ItemStack(Material.IRON_HELMET);
-/* 142 */       colete1.addEnchantment(Enchantment.PROTECTION, 1);
-/* 143 */       colete1.addEnchantment(Enchantment.UNBREAKING, 3);
+/* 142 */       colete1.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1);
+/* 143 */       colete1.addEnchantment(Enchantment.DURABILITY, 3);
 /* 144 */       Habilidade.setAbility(s, "PvP");
 /* 145 */       ItemStack calcinhasuja = new ItemStack(Material.IRON_LEGGINGS);
                 API.give(p);
-                calcinhasuja.addEnchantment(Enchantment.UNBREAKING, 3);
-                calcinhasuja.addEnchantment(Enchantment.PROTECTION, 1);
+                calcinhasuja.addEnchantment(Enchantment.DURABILITY, 3);
+                calcinhasuja.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1);
                 RTP.TeleportArenaRandom(p);
 /* 148 */       ItemStack bota = new ItemStack(Material.IRON_BOOTS);
-/* 150 */       bota.addEnchantment(Enchantment.UNBREAKING, 3);
+/* 150 */       bota.addEnchantment(Enchantment.DURABILITY, 3);
 /* 151 */       s.getInventory().addItem(new ItemStack[] { sword });
 /* 152 */       for (int i = 0; i <= 34; i++) {
 /* 153 */         s.getInventory().addItem(new ItemStack[] { sopa });
@@ -241,22 +241,22 @@ if (!Main.getInstance().getConfig().getBoolean("DisableShopItem")) {
 /* 134 */         s.removePotionEffect(effect.getType());
 /*     */       }
 /* 136 */       ItemStack sword = new ItemStack(Material.DIAMOND_AXE);
-/* 137 */       sword.addEnchantment(Enchantment.SHARPNESS, 1);
+/* 137 */       sword.addEnchantment(Enchantment.DAMAGE_ALL, 1);
 /* 138 */       ItemStack colete = new ItemStack(Material.IRON_CHESTPLATE);
-/* 139 */       colete.addEnchantment(Enchantment.PROTECTION, 1);
-/* 140 */       colete.addEnchantment(Enchantment.UNBREAKING, 3);
+/* 139 */       colete.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1);
+/* 140 */       colete.addEnchantment(Enchantment.DURABILITY, 3);
 /* 141 */       colete1 = new ItemStack(Material.IRON_HELMET);
-/* 142 */       colete1.addEnchantment(Enchantment.PROTECTION, 1);
-/* 143 */       colete1.addEnchantment(Enchantment.UNBREAKING, 3);
+/* 142 */       colete1.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1);
+/* 143 */       colete1.addEnchantment(Enchantment.DURABILITY, 3);
 /* 144 */       Habilidade.setAbility(s, "Viking");
 /* 145 */       ItemStack calcinhasuja = new ItemStack(Material.IRON_LEGGINGS);
 /*     */       
-/* 147 */       calcinhasuja.addEnchantment(Enchantment.UNBREAKING, 3);
-                calcinhasuja.addEnchantment(Enchantment.PROTECTION, 1);
+/* 147 */       calcinhasuja.addEnchantment(Enchantment.DURABILITY, 3);
+                calcinhasuja.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1);
 /* 148 */       ItemStack bota = new ItemStack(Material.IRON_BOOTS);
 /*     */       API.give(p);
 RTP.TeleportArenaRandom(p);
-/* 150 */       bota.addEnchantment(Enchantment.UNBREAKING, 3);
+/* 150 */       bota.addEnchantment(Enchantment.DURABILITY, 3);
 /* 151 */       s.getInventory().addItem(new ItemStack[] { sword });
 /* 152 */       for (int i = 0; i <= 34; i++) {
 /* 153 */         s.getInventory().addItem(new ItemStack[] { sopa });
@@ -309,7 +309,7 @@ if (Main.kits.getBoolean("WarperDisabled")) {
 /*     */       }
 RTP.TeleportArenaRandom(p);
 /* 197 */       ItemStack tunic = new ItemStack(Material.LEATHER_CHESTPLATE);
-/* 198 */       tunic.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
+/* 198 */       tunic.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
 /* 199 */       Object meta = (LeatherArmorMeta)tunic.getItemMeta();
 /* 200 */       ((LeatherArmorMeta)meta).setColor(Color.BLUE);
 /* 201 */       tunic.setItemMeta((ItemMeta)meta);
@@ -358,7 +358,7 @@ if (Main.kits.getBoolean("SwitcherDisabled")) {
 /*     */       }
 /*     */       
 /* 241 */       ItemStack tunic = new ItemStack(Material.LEATHER_HELMET);
-/* 242 */       tunic.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
+/* 242 */       tunic.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
 /* 243 */       LeatherArmorMeta meta1 = (LeatherArmorMeta)tunic.getItemMeta();
 /* 244 */       ((LeatherArmorMeta)meta1).setColor(Color.WHITE);
 /* 245 */       tunic.setItemMeta((ItemMeta)meta1);
@@ -399,11 +399,11 @@ RTP.TeleportArenaRandom(p);
 /* 279 */       ItemStack sword2 = new ItemStack(Material.STONE_SWORD);
 /* 280 */       ItemStack flecha = new ItemStack(Material.ARROW);
 /* 281 */       sword2.addEnchantment(Enchantment.KNOCKBACK, 2);
-/* 282 */       sword2.addEnchantment(Enchantment.SHARPNESS, 2);
+/* 282 */       sword2.addEnchantment(Enchantment.DAMAGE_ALL, 2);
 /* 283 */       Object bow = new ItemStack(Material.BOW);
-/* 284 */       ((ItemStack)bow).addEnchantment(Enchantment.POWER, 2);
-/* 285 */       ((ItemStack)bow).addEnchantment(Enchantment.INFINITY, 1);
-/* 286 */       ((ItemStack)bow).addEnchantment(Enchantment.PUNCH, 1);
+/* 284 */       ((ItemStack)bow).addEnchantment(Enchantment.ARROW_DAMAGE, 2);
+/* 285 */       ((ItemStack)bow).addEnchantment(Enchantment.ARROW_INFINITE, 1);
+/* 286 */       ((ItemStack)bow).addEnchantment(Enchantment.ARROW_KNOCKBACK, 1);
 /* 287 */       s.getInventory().addItem(new ItemStack[] { sword2 });
 /* 288 */       s.getInventory().addItem(new ItemStack[] { (ItemStack)bow });
 /* 289 */       s.getInventory().addItem(new ItemStack[] { flecha });
@@ -448,13 +448,13 @@ RTP.TeleportArenaRandom(p);
 /*     */       }
 /* 331 */       ItemStack sword3 = new ItemStack(Material.STONE_SWORD);
 /* 332 */       sword3.addEnchantment(Enchantment.KNOCKBACK, 2);
-/* 333 */       sword3.addEnchantment(Enchantment.SHARPNESS, 1);
+/* 333 */       sword3.addEnchantment(Enchantment.DAMAGE_ALL, 1);
 /* 334 */       ItemStack flecha = new ItemStack(Material.ARROW, 64);
 /* 335 */       sword3.addEnchantment(Enchantment.FIRE_ASPECT, 1);
 /* 336 */       Object bow1 = new ItemStack(Material.BOW);
-/* 337 */       ((ItemStack)bow1).addEnchantment(Enchantment.POWER, 1);
-((ItemStack)bow1).addEnchantment(Enchantment.PUNCH, 1);
-/* 338 */       ((ItemStack)bow1).addEnchantment(Enchantment.FLAME, 1);
+/* 337 */       ((ItemStack)bow1).addEnchantment(Enchantment.ARROW_DAMAGE, 1);
+((ItemStack)bow1).addEnchantment(Enchantment.ARROW_KNOCKBACK, 1);
+/* 338 */       ((ItemStack)bow1).addEnchantment(Enchantment.ARROW_FIRE, 1);
 /* 339 */       s.getInventory().addItem(new ItemStack[] { sword3 });
 /* 340 */       TitleAPI.sendTitle(p, Integer.valueOf(20), Integer.valueOf(60), Integer.valueOf(20), this.main.getConfig().getString("Title.KitTitle"), this.main.getConfig().getString("Title.KitSubTitle").replaceAll("%kit%", "Pyro"));
 /* 341 */       s.getInventory().addItem(new ItemStack[] { (ItemStack)bow1 });
@@ -466,7 +466,7 @@ RTP.TeleportArenaRandom(p);
 RTP.TeleportArenaRandom(p);
 /* 347 */       s.getInventory().addItem(new ItemStack[] { new ItemStack(Material.ARROW, 64) });
 /* 348 */       ItemStack tunic = new ItemStack(Material.LEATHER_HELMET);
-/* 349 */       tunic.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
+/* 349 */       tunic.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
 /* 350 */       LeatherArmorMeta meta11 = (LeatherArmorMeta)tunic.getItemMeta();
 /* 351 */       meta11.setColor(Color.YELLOW);
 /* 352 */       tunic.setItemMeta(meta11);
@@ -508,7 +508,7 @@ RTP.TeleportArenaRandom(p);
 /* 388 */         s.removePotionEffect(effect.getType());
 /*     */       }
 /* 390 */       ItemStack sword4 = new ItemStack(Material.IRON_SWORD);
-/* 391 */       sword4.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
+/* 391 */       sword4.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
 /* 392 */       TitleAPI.sendTitle(p, Integer.valueOf(20), Integer.valueOf(60), Integer.valueOf(20), this.main.getConfig().getString("Title.KitTitle"), this.main.getConfig().getString("Title.KitSubTitle").replaceAll("%kit%", "Tank"));
 /* 393 */       s.getInventory().addItem(new ItemStack[] { sword4 });
 /* 394 */       for (int i = 0; i <= 34; i++) {
@@ -521,9 +521,13 @@ RTP.TeleportArenaRandom(p);
 /* 400 */       s.getInventory().setLeggings(new ItemStack(Material.DIAMOND_LEGGINGS));
 /* 401 */       s.getInventory().setBoots(new ItemStack(Material.DIAMOND_BOOTS));
 /* 402 */       Habilidade.setAbility(s, "Tank");
-/* 403 */       s.addPotionEffect(new PotionEffect(PotionEffectType.SLOWNESS, 999999999, 2));
+/* 403 */       s.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 999999999, 2));
+
 /* 404 */      
-/*     */       
+/*     */       /* 403 */       s.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 999999999, 1));
+
+/* 403 */       s.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 999999999, 0));
+
 /* 406 */       return true;
 /*     */     }
 /* 408 */     if (cmd.getName().equalsIgnoreCase("jumper")) {
@@ -551,7 +555,7 @@ RTP.TeleportArenaRandom(p);
 /*     */       }
 /* 431 */       TitleAPI.sendTitle(p, Integer.valueOf(20), Integer.valueOf(60), Integer.valueOf(20), this.main.getConfig().getString("Title.KitTitle"), this.main.getConfig().getString("Title.KitSubTitle").replaceAll("%kit%", "Jumper"));
 /* 432 */       ItemStack sword5 = new ItemStack(Material.DIAMOND_SWORD);
-/* 433 */       sword5.addEnchantment(Enchantment.SHARPNESS, 1);
+/* 433 */       sword5.addEnchantment(Enchantment.DAMAGE_ALL, 1);
 /* 434 */       s.getInventory().addItem(new ItemStack[] { sword5 });
 /* 435 */       for (int i = 0; i <= 34; i++) {
 /* 436 */         s.getInventory().addItem(new ItemStack[] { sopa });
@@ -559,35 +563,35 @@ RTP.TeleportArenaRandom(p);
 /*     */       API.give(p);
 RTP.TeleportArenaRandom(p);
 /* 439 */       Object helmet = new ItemStack(Material.IRON_HELMET);
-/* 440 */       ((ItemStack)helmet).addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
-/* 441 */       ((ItemStack)helmet).addEnchantment(Enchantment.PROJECTILE_PROTECTION, 2);
+/* 440 */       ((ItemStack)helmet).addUnsafeEnchantment(Enchantment.DURABILITY, 150);
+/* 441 */       ((ItemStack)helmet).addEnchantment(Enchantment.PROTECTION_PROJECTILE, 2);
 /*     */       
 /*     */ 
 /* 444 */       s.getEquipment().setHelmet((ItemStack)helmet);
 /* 445 */       ItemStack tunic1 = new ItemStack(Material.IRON_CHESTPLATE);
-/* 446 */       tunic1.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
-/* 447 */       tunic1.addEnchantment(Enchantment.PROJECTILE_PROTECTION, 2);
+/* 446 */       tunic1.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
+/* 447 */       tunic1.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 2);
 /*     */       
 /*     */ 
 /* 450 */       s.getEquipment().setChestplate(tunic1);
 /* 451 */       ItemStack tunic11 = new ItemStack(Material.LEATHER_LEGGINGS);
-/* 452 */       tunic11.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
-/* 453 */       tunic11.addEnchantment(Enchantment.PROJECTILE_PROTECTION, 2);
+/* 452 */       tunic11.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
+/* 453 */       tunic11.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 2);
 /* 454 */       LeatherArmorMeta meta1111 = (LeatherArmorMeta)tunic11.getItemMeta();
 /* 455 */       meta1111.setColor(Color.BLACK);
 /* 456 */       tunic11.setItemMeta(meta1111);
 /* 457 */       s.getEquipment().setLeggings(tunic11);
 /* 458 */       ItemStack tunic111 = new ItemStack(Material.LEATHER_BOOTS);
-/* 459 */       tunic111.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
-/* 460 */       tunic111.addEnchantment(Enchantment.PROJECTILE_PROTECTION, 2);
-tunic111.addEnchantment(Enchantment.FEATHER_FALLING, 4);
+/* 459 */       tunic111.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
+/* 460 */       tunic111.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 2);
+tunic111.addEnchantment(Enchantment.PROTECTION_FALL, 4);
 /* 461 */       LeatherArmorMeta meta11111 = (LeatherArmorMeta)tunic111.getItemMeta();
 /* 462 */       meta11111.setColor(Color.YELLOW);
 /* 463 */       Habilidade.setAbility(s, "Jumper");
 /* 464 */       tunic111.setItemMeta(meta11111);
 /* 465 */       s.getEquipment().setBoots(tunic111);
 /* 466 */       s.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 999999999, 1));
-/* 467 */       s.addPotionEffect(new PotionEffect(PotionEffectType.JUMP_BOOST, 999999999, 3));
+/* 467 */       s.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 999999999, 3));
 /* 468 */      
 /*     */       
 /* 470 */       return true;
@@ -622,21 +626,21 @@ tunic111.addEnchantment(Enchantment.FEATHER_FALLING, 4);
 /* 499 */         TitleAPI.sendTitle(p, Integer.valueOf(20), Integer.valueOf(60), Integer.valueOf(20), this.main.getConfig().getString("Title.KitTitle"), this.main.getConfig().getString("Title.KitSubTitle").replaceAll("%kit%", "Cactus"));
 /*     */       }
 /* 501 */       ItemStack helmet1 = new ItemStack(Material.IRON_HELMET);
-/* 502 */       ((ItemStack)helmet1).addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
+/* 502 */       ((ItemStack)helmet1).addUnsafeEnchantment(Enchantment.DURABILITY, 150);
 /* 503 */       ((ItemStack)helmet1).addEnchantment(Enchantment.THORNS, 3);
 /* 504 */       s.getEquipment().setHelmet((ItemStack)helmet1);
 /* 505 */       ItemStack tunic1 = new ItemStack(Material.IRON_CHESTPLATE);
 /* 506 */       tunic1.addEnchantment(Enchantment.THORNS, 3);
-/* 507 */       tunic1.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
+/* 507 */       tunic1.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
 /* 508 */       s.getEquipment().setChestplate(tunic1);
 /* 509 */       ItemStack tunic11 = new ItemStack(Material.LEATHER_LEGGINGS);
 /* 510 */       tunic11.addEnchantment(Enchantment.THORNS, 3);
-/* 511 */       tunic11.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
+/* 511 */       tunic11.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
 /* 512 */       s.getEquipment().setLeggings(tunic11);
 /* 513 */       Habilidade.setAbility(s, "Cactus");
 /* 514 */       ItemStack tunic111 = new ItemStack(Material.LEATHER_BOOTS);
 /* 515 */       tunic111.addEnchantment(Enchantment.THORNS, 3);
-/* 516 */       tunic111.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
+/* 516 */       tunic111.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
 /* 517 */       s.getEquipment().setBoots(tunic111);
 /* 518 */      
 /*     */       API.give(p);
@@ -677,33 +681,33 @@ if (Main.kits.getBoolean("BomberDisabled")) {
 /*     */       }
 TitleAPI.sendTitle(p, Integer.valueOf(5), Integer.valueOf(20), Integer.valueOf(5), this.main.getConfig().getString("Title.KitTitle"), this.main.getConfig().getString("Title.KitSubTitle").replace("%kit%", "Bomber"));
 /* 551 */       ItemStack helmet11 = new ItemStack(Material.LEATHER_HELMET);
-/* 552 */       helmet11.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
-/* 553 */       helmet11.addEnchantment(Enchantment.PROJECTILE_PROTECTION, 2);
-                helmet11.addEnchantment(Enchantment.PROTECTION, 2);
+/* 552 */       helmet11.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
+/* 553 */       helmet11.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 2);
+                helmet11.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
 /* 554 */       Object meta11 = (LeatherArmorMeta)helmet11.getItemMeta();
 /* 555 */       ((LeatherArmorMeta)meta11).setColor(Color.RED);
 /* 556 */       helmet11.setItemMeta((ItemMeta)meta11);
 /* 557 */       s.getEquipment().setHelmet(helmet11);
 /* 558 */       ItemStack tunic1 = new ItemStack(Material.LEATHER_CHESTPLATE);
-/* 559 */       tunic1.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
-/* 560 */       tunic1.addEnchantment(Enchantment.PROJECTILE_PROTECTION, 2);
-                tunic1.addEnchantment(Enchantment.PROTECTION, 2);
+/* 559 */       tunic1.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
+/* 560 */       tunic1.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 2);
+                tunic1.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
 /* 561 */       LeatherArmorMeta meta111 = (LeatherArmorMeta)tunic1.getItemMeta();
 /* 562 */       meta111.setColor(Color.WHITE);
 /* 563 */       tunic1.setItemMeta(meta111);
 /* 564 */       s.getEquipment().setChestplate(tunic1);
 /* 565 */       ItemStack tunic11 = new ItemStack(Material.LEATHER_LEGGINGS);
-/* 566 */       tunic11.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
-/* 567 */       tunic11.addEnchantment(Enchantment.PROJECTILE_PROTECTION, 2);
-                tunic11.addEnchantment(Enchantment.PROTECTION, 2);
+/* 566 */       tunic11.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
+/* 567 */       tunic11.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 2);
+                tunic11.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
 /* 568 */       LeatherArmorMeta meta1111 = (LeatherArmorMeta)tunic11.getItemMeta();
 /* 569 */       meta1111.setColor(Color.RED);
 /* 570 */       tunic11.setItemMeta(meta1111);
 /* 571 */       s.getEquipment().setLeggings(tunic11);
 /* 572 */       ItemStack tunic111 = new ItemStack(Material.LEATHER_BOOTS);
-/* 573 */       tunic111.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
-/* 574 */       tunic111.addEnchantment(Enchantment.PROJECTILE_PROTECTION, 2);
-                tunic111.addEnchantment(Enchantment.PROTECTION, 2);
+/* 573 */       tunic111.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
+/* 574 */       tunic111.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 2);
+                tunic111.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
 /* 575 */       LeatherArmorMeta meta11111 = (LeatherArmorMeta)tunic111.getItemMeta();
 /* 576 */       meta11111.setColor(Color.WHITE);
 /* 577 */       tunic111.setItemMeta(meta11111);
@@ -743,40 +747,40 @@ if (Main.kits.getBoolean("WaspDisabled")) {
 /* 606 */         s.removePotionEffect(effect.getType());
 /*     */       }
 /* 608 */       ItemStack sword7 = new ItemStack(Material.BLAZE_ROD);
-/* 609 */       sword7.addUnsafeEnchantment(Enchantment.SHARPNESS, 8);
+/* 609 */       sword7.addUnsafeEnchantment(Enchantment.DAMAGE_ALL, 8);
 /* 610 */       s.getInventory().addItem(new ItemStack[] { sword7 });
 /* 611 */       for (int i = 0; i <= 34; i++) {
 /* 612 */         s.getInventory().addItem(new ItemStack[] { sopa });
 /*     */       }
 /*     */       
 /* 615 */       Object helmet11 = new ItemStack(Material.LEATHER_HELMET);
-/* 616 */       ((ItemStack)helmet11).addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
-/* 617 */       ((ItemStack)helmet11).addEnchantment(Enchantment.PROJECTILE_PROTECTION, 3);
-                ((ItemStack)helmet11).addEnchantment(Enchantment.PROTECTION, 2);
+/* 616 */       ((ItemStack)helmet11).addUnsafeEnchantment(Enchantment.DURABILITY, 150);
+/* 617 */       ((ItemStack)helmet11).addEnchantment(Enchantment.PROTECTION_PROJECTILE, 3);
+                ((ItemStack)helmet11).addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
 /* 618 */       LeatherArmorMeta meta111 = (LeatherArmorMeta)((ItemStack)helmet11).getItemMeta();
 /* 619 */       meta111.setColor(Color.BLACK);
 /* 620 */       ((ItemStack)helmet11).setItemMeta(meta111);
 /* 621 */       s.getEquipment().setHelmet((ItemStack)helmet11);
 /* 622 */       ItemStack tunic1 = new ItemStack(Material.LEATHER_CHESTPLATE);
-/* 623 */       tunic1.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
-/* 624 */       tunic1.addEnchantment(Enchantment.PROJECTILE_PROTECTION, 3);
-tunic1.addEnchantment(Enchantment.PROTECTION, 3);
+/* 623 */       tunic1.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
+/* 624 */       tunic1.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 3);
+tunic1.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
 /* 625 */       LeatherArmorMeta meta1111 = (LeatherArmorMeta)tunic1.getItemMeta();
 /* 626 */       meta1111.setColor(Color.YELLOW);
 /* 627 */       tunic1.setItemMeta(meta1111);
 /* 628 */       s.getEquipment().setChestplate(tunic1);
 /* 629 */       ItemStack tunic11 = new ItemStack(Material.LEATHER_LEGGINGS);
-/* 630 */       tunic11.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
-/* 631 */       tunic11.addEnchantment(Enchantment.PROJECTILE_PROTECTION, 2);
-                tunic11.addEnchantment(Enchantment.PROTECTION, 1);
+/* 630 */       tunic11.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
+/* 631 */       tunic11.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 2);
+                tunic11.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1);
 /* 632 */       LeatherArmorMeta meta11111 = (LeatherArmorMeta)tunic11.getItemMeta();
 /* 633 */       meta11111.setColor(Color.BLACK);
 /* 634 */       tunic11.setItemMeta(meta11111);
 /* 635 */       s.getEquipment().setLeggings(tunic11);
 /* 636 */       ItemStack tunic111 = new ItemStack(Material.LEATHER_BOOTS);
-/* 637 */       tunic111.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
-/* 638 */       tunic111.addEnchantment(Enchantment.PROJECTILE_PROTECTION, 2);
-tunic111.addEnchantment(Enchantment.PROTECTION, 2);
+/* 637 */       tunic111.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
+/* 638 */       tunic111.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 2);
+tunic111.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
 /* 639 */       LeatherArmorMeta meta111111 = (LeatherArmorMeta)tunic111.getItemMeta();
 /* 640 */       meta111111.setColor(Color.YELLOW);
 /* 641 */       tunic111.setItemMeta(meta111111);
@@ -822,39 +826,39 @@ if (Main.kits.getBoolean("SpidermanDisabled")) {
 /*     */       API.give(p);
 RTP.TeleportArenaRandom(p);
 /* 676 */       ItemStack helmet111 = new ItemStack(Material.LEATHER_HELMET);
-/* 677 */       helmet111.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
-/* 678 */       helmet111.addEnchantment(Enchantment.PROJECTILE_PROTECTION, 2);
-/* 679 */       helmet111.addEnchantment(Enchantment.PROTECTION, 2);
+/* 677 */       helmet111.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
+/* 678 */       helmet111.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 2);
+/* 679 */       helmet111.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
 /* 680 */       Object meta111 = (LeatherArmorMeta)helmet111.getItemMeta();
 /* 681 */       ((LeatherArmorMeta)meta111).setColor(Color.RED);
 /* 682 */       helmet111.setItemMeta((ItemMeta)meta111);
 /* 683 */       s.getEquipment().setHelmet(helmet111);
 /* 684 */       ItemStack tunic1 = new ItemStack(Material.LEATHER_CHESTPLATE);
-/* 685 */       tunic1.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
-/* 686 */       tunic1.addEnchantment(Enchantment.PROJECTILE_PROTECTION, 2);
-/* 687 */       tunic1.addEnchantment(Enchantment.PROTECTION, 2);
+/* 685 */       tunic1.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
+/* 686 */       tunic1.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 2);
+/* 687 */       tunic1.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
 /* 688 */       LeatherArmorMeta meta1111 = (LeatherArmorMeta)tunic1.getItemMeta();
 /* 689 */       meta1111.setColor(Color.RED);
 /* 690 */       tunic1.setItemMeta(meta1111);
 /* 691 */       s.getEquipment().setChestplate(tunic1);
 /* 692 */       ItemStack tunic11 = new ItemStack(Material.LEATHER_LEGGINGS);
-/* 693 */       tunic11.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
-/* 694 */       tunic11.addEnchantment(Enchantment.PROJECTILE_PROTECTION, 2);
+/* 693 */       tunic11.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
+/* 694 */       tunic11.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 2);
 /* 695 */       LeatherArmorMeta meta11111 = (LeatherArmorMeta)tunic11.getItemMeta();
-/* 696 */       tunic11.addEnchantment(Enchantment.PROTECTION, 2);
+/* 696 */       tunic11.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
 /* 697 */       meta11111.setColor(Color.RED);
 /* 698 */       tunic11.setItemMeta(meta11111);
 /* 699 */       s.getEquipment().setLeggings(tunic11);
 /* 700 */       ItemStack tunic111 = new ItemStack(Material.LEATHER_BOOTS);
-/* 701 */       tunic111.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
-tunic111.addEnchantment(Enchantment.FEATHER_FALLING, 4);
-/* 702 */       tunic111.addEnchantment(Enchantment.PROJECTILE_PROTECTION, 2);
+/* 701 */       tunic111.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
+tunic111.addEnchantment(Enchantment.PROTECTION_FALL, 4);
+/* 702 */       tunic111.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 2);
 /* 703 */       LeatherArmorMeta meta111111 = (LeatherArmorMeta)tunic111.getItemMeta();
 /* 704 */       meta111111.setColor(Color.RED);
 /* 705 */       tunic111.setItemMeta(meta111111);
 /* 706 */       s.getEquipment().setBoots(tunic111);
 /* 707 */       Habilidade.setAbility(s, "Spiderman");
-/* 708 */       tunic111.addEnchantment(Enchantment.PROTECTION, 2);
+/* 708 */       tunic111.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
 /* 709 */      
 /*     */       TitleAPI.sendTitle(p, Integer.valueOf(20), Integer.valueOf(60), Integer.valueOf(20), this.main.getConfig().getString("Title.KitTitle"), this.main.getConfig().getString("Title.KitSubTitle").replace("%kit%", "Spiderman"));
 /* 711 */       return true;
@@ -887,8 +891,8 @@ if (Main.kits.getBoolean("AirmanDisabled")) {
 /* 734 */         s.removePotionEffect(effect.getType());
 /*     */       }
 /* 736 */       ItemStack sword8 = new ItemStack(Material.IRON_SWORD);
-/* 737 */       sword8.addUnsafeEnchantment(Enchantment.SHARPNESS, 1);
-sword8.addUnsafeEnchantment(Enchantment.UNBREAKING, 3);
+/* 737 */       sword8.addUnsafeEnchantment(Enchantment.DAMAGE_ALL, 1);
+sword8.addUnsafeEnchantment(Enchantment.DURABILITY, 3);
 /* 738 */       Habilidade.setAbility(s, "Airman");
 /*     */       
 /* 740 */       s.getInventory().addItem(new ItemStack[] { sword8 });
@@ -898,34 +902,34 @@ sword8.addUnsafeEnchantment(Enchantment.UNBREAKING, 3);
 /* 744 */         TitleAPI.sendTitle(p, Integer.valueOf(20), Integer.valueOf(60), Integer.valueOf(20), this.main.getConfig().getString("Title.KitTitle"), this.main.getConfig().getString("Title.KitSubTitle").replaceAll("%kit%", "Airman"));
 /*     */       }
 /* 746 */       Object helmet111 = new ItemStack(Material.LEATHER_HELMET);
-/* 747 */       ((ItemStack)helmet111).addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
-/* 748 */       ((ItemStack)helmet111).addEnchantment(Enchantment.PROJECTILE_PROTECTION, 2);
-((ItemStack)helmet111).addEnchantment(Enchantment.PROTECTION, 3);
+/* 747 */       ((ItemStack)helmet111).addUnsafeEnchantment(Enchantment.DURABILITY, 150);
+/* 748 */       ((ItemStack)helmet111).addEnchantment(Enchantment.PROTECTION_PROJECTILE, 2);
+((ItemStack)helmet111).addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
 /* 749 */       LeatherArmorMeta meta1111 = (LeatherArmorMeta)((ItemStack)helmet111).getItemMeta();
 /* 750 */       meta1111.setColor(Color.BLACK);
 /* 751 */       ((ItemStack)helmet111).setItemMeta(meta1111);
 /* 752 */       s.getEquipment().setHelmet((ItemStack)helmet111);
 /* 753 */       ItemStack tunic1 = new ItemStack(Material.LEATHER_CHESTPLATE);
-/* 754 */       tunic1.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
-/* 755 */       tunic1.addEnchantment(Enchantment.PROJECTILE_PROTECTION, 2);
-tunic1.addEnchantment(Enchantment.PROTECTION, 2);
+/* 754 */       tunic1.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
+/* 755 */       tunic1.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 2);
+tunic1.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
 /* 756 */       LeatherArmorMeta meta11111 = (LeatherArmorMeta)tunic1.getItemMeta();
 /* 757 */       meta11111.setColor(Color.BLACK);
 /* 758 */       tunic1.setItemMeta(meta11111);
 /* 759 */       s.getEquipment().setChestplate(tunic1);
 /* 760 */       ItemStack tunic11 = new ItemStack(Material.LEATHER_LEGGINGS);
-/* 761 */       tunic11.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
-/* 762 */       tunic11.addEnchantment(Enchantment.PROJECTILE_PROTECTION, 2);
-                tunic11.addEnchantment(Enchantment.PROTECTION, 2);
+/* 761 */       tunic11.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
+/* 762 */       tunic11.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 2);
+                tunic11.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
 /* 763 */       LeatherArmorMeta meta111111 = (LeatherArmorMeta)tunic11.getItemMeta();
 /* 764 */       meta111111.setColor(Color.BLACK);
 /* 765 */       tunic11.setItemMeta(meta111111);
 /* 766 */       s.getEquipment().setLeggings(tunic11);
 /* 767 */       ItemStack tunic111 = new ItemStack(Material.LEATHER_BOOTS);
-/* 768 */       tunic111.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
-/* 769 */       tunic111.addEnchantment(Enchantment.PROJECTILE_PROTECTION, 2);
-tunic111.addEnchantment(Enchantment.PROTECTION, 3);
-tunic111.addEnchantment(Enchantment.FEATHER_FALLING, 4);
+/* 768 */       tunic111.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
+/* 769 */       tunic111.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 2);
+tunic111.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
+tunic111.addEnchantment(Enchantment.PROTECTION_FALL, 4);
 /* 770 */       LeatherArmorMeta meta1111111 = (LeatherArmorMeta)tunic111.getItemMeta();
 /* 771 */       meta1111111.setColor(Color.BLACK);
 /* 772 */       tunic111.setItemMeta(meta1111111);
@@ -961,7 +965,7 @@ RTP.TeleportArenaRandom(p);
 /*     */       }
 /* 802 */       ItemStack sword9 = new ItemStack(Material.DIAMOND_SWORD);
 ItemStack FISH9 = new ItemStack(Material.FISHING_ROD);
-/* 804 */       FISH9.addUnsafeEnchantment(Enchantment.UNBREAKING, 5);
+/* 804 */       FISH9.addUnsafeEnchantment(Enchantment.DURABILITY, 5);
 /* 805 */       s.getInventory().addItem(new ItemStack[] { sword9 });
 s.getInventory().addItem(new ItemStack[] { FISH9 });
 /* 806 */       
@@ -1012,35 +1016,35 @@ RTP.TeleportArenaRandom(p);
 /* 867 */         s.removePotionEffect(effect.getType());
 /*     */       }
 /* 869 */       ItemStack sword10 = new ItemStack(Material.STONE_SWORD);
-/* 870 */       sword10.addUnsafeEnchantment(Enchantment.SHARPNESS, 3);
-/* 871 */       sword10.addUnsafeEnchantment(Enchantment.UNBREAKING, 8);
+/* 870 */       sword10.addUnsafeEnchantment(Enchantment.DAMAGE_ALL, 3);
+/* 871 */       sword10.addUnsafeEnchantment(Enchantment.DURABILITY, 8);
 /*     */       
 /* 873 */       s.getInventory().addItem(new ItemStack[] { sword10 });
 /* 874 */       s.getInventory().addItem(new ItemStack[] { new ItemStack(Material.FISHING_ROD) });
 /*     */       
 /* 876 */       ItemStack helmet11111 = new ItemStack(Material.LEATHER_HELMET);
-/* 877 */       helmet11111.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
-/* 878 */       helmet11111.addEnchantment(Enchantment.PROJECTILE_PROTECTION, 2);
+/* 877 */       helmet11111.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
+/* 878 */       helmet11111.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 2);
 /* 879 */       LeatherArmorMeta meta1111 = (LeatherArmorMeta)helmet11111.getItemMeta();
 /* 880 */       meta1111.setColor(Color.WHITE);
 /* 881 */       helmet11111.setItemMeta(meta1111);
 /* 882 */       s.getEquipment().setHelmet(helmet11111);
 /* 883 */       ItemStack tunic1 = new ItemStack(Material.LEATHER_CHESTPLATE);
-/* 884 */       tunic1.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
-/* 885 */       tunic1.addEnchantment(Enchantment.PROJECTILE_PROTECTION, 2);
+/* 884 */       tunic1.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
+/* 885 */       tunic1.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 2);
 /* 886 */       LeatherArmorMeta meta11111 = (LeatherArmorMeta)tunic1.getItemMeta();
 /* 887 */       meta11111.setColor(Color.BLUE);
 /* 888 */       tunic1.setItemMeta(meta11111);
 /* 889 */       s.getEquipment().setChestplate(tunic1);
 /* 890 */       ItemStack tunic11 = new ItemStack(Material.LEATHER_LEGGINGS);
-/* 891 */       tunic11.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
-/* 892 */       tunic11.addEnchantment(Enchantment.PROJECTILE_PROTECTION, 2);
+/* 891 */       tunic11.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
+/* 892 */       tunic11.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 2);
 /* 893 */       LeatherArmorMeta meta111111 = (LeatherArmorMeta)tunic11.getItemMeta();
 /* 894 */       meta111111.setColor(Color.BLUE);
 /* 895 */       tunic11.setItemMeta(meta111111);
 /* 896 */       s.getEquipment().setLeggings(tunic11);
 /* 897 */       ItemStack tunic111 = new ItemStack(Material.LEATHER_BOOTS);
-/* 898 */       tunic111.addUnsafeEnchantment(Enchantment.UNBREAKING, 150);
+/* 898 */       tunic111.addUnsafeEnchantment(Enchantment.DURABILITY, 150);
 /*     */       
 /* 900 */       LeatherArmorMeta meta1111111 = (LeatherArmorMeta)tunic111.getItemMeta();
 /* 901 */       meta1111111.setColor(Color.WHITE);

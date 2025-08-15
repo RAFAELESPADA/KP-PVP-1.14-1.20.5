@@ -71,7 +71,7 @@ public class Shop
     createButton(Material.LAVA_BUCKET, shop, 36, "§6-> §cFireman", Main.messages.getString("ShopPriceLore").replace("&", "§") + " 6000");
     createButton(Material.SHIELD, shop, 37, "§6-> §cShielder", Main.messages.getString("ShopPriceLore").replace("&", "§") + " 8000");
     createButton(Material.MILK_BUCKET, shop, 38, "§6-> §cMilkMan", Main.messages.getString("ShopPriceLore").replace("&", "§") + " 8000");
-    createButton(Material.NETHERITE_HELMET, shop, 39, "§6-> §cAntiStomper", Main.messages.getString("ShopPriceLore").replace("&", "§") + " 8000");
+    createButton(Material.GOLDEN_HELMET, shop, 39, "§6-> §cAntiStomper", Main.messages.getString("ShopPriceLore").replace("&", "§") + " 8000");
     createButton(Material.GHAST_TEAR, shop, 40, "§6-> §cGhast", Main.messages.getString("ShopPriceLore").replace("&", "§") + " 18000");
     createButton(Material.ARROW, shop, 41, "§6-> §cHedgeHog", Main.messages.getString("ShopPriceLore").replace("&", "§") + " 18000");
     createButton(Material.BARRIER, shop, 53, "§4§l-> §cClose", Main.messages.getString("CloseShopLore").replace("&", "§"));
@@ -332,7 +332,7 @@ public class Shop
           p.closeInventory();
         }
       }
-    if ((clicked.getType() == Material.NETHERITE_HELMET)) {
+    if ((clicked.getType() == Material.GOLDEN_HELMET)) {
         if (Coins.getCoins(p) >= 8000)
         {
       	  if (p.hasPermission("kitpvp.kit.antistomper")) {

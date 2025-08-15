@@ -46,11 +46,11 @@ import org.bukkit.enchantments.Enchantment;
 /* 42 */         return true;
 /*    */       }
 /* 44 */       p.getInventory().clear();
-/* 45 */       ItemStack dima = new ItemStack(Material.NETHERITE_SWORD);
+/* 45 */       ItemStack dima = new ItemStack(Material.DIAMOND_SWORD);
 /* 46 */       ItemMeta souperaa = dima.getItemMeta();
 /* 47 */       souperaa.setDisplayName("§cSword");
 /* 48 */       dima.setItemMeta(souperaa);
-               dima.addEnchantment(Enchantment.SHARPNESS, 1);
+               dima.addEnchantment(Enchantment.DAMAGE_ALL, 2);
                
                ItemStack monk = new ItemStack(Material.SHIELD);
                /* 196 */     ItemMeta ims = monk.getItemMeta();

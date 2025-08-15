@@ -91,7 +91,7 @@ NewKitMenu.playSound(p, Main.getInstace().getConfig().getString("Sound.RyuAbilit
 	      }
 	  }
 	public static void throwRandomFirework(Player p) {
-	    Firework fw = (Firework) p.getWorld().spawnEntity(p.getLocation(), EntityType.FIREWORK_ROCKET);
+	    Firework fw = (Firework) p.getWorld().spawnEntity(p.getLocation(), EntityType.FIREWORK);
 	    FireworkMeta fwm = fw.getFireworkMeta();
 
 	    //Our random generator

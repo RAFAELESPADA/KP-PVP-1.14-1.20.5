@@ -47,7 +47,7 @@
 /*  46 */         Random rand = new Random();
 /*  47 */         int percent = rand.nextInt(100);
 /*  48 */         if (percent <= Main.kits.getInt("SnailChance")) {
-/*  49 */           entity.addPotionEffect(new PotionEffect(PotionEffectType.SLOWNESS, Main.kits.getInt("SnailSlownessTime") * 20, 1));
+/*  49 */           entity.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Main.kits.getInt("SnailSlownessTime") * 20, 1));
 /*  50 */           return;
 /*     */         }
 /*  52 */         return;

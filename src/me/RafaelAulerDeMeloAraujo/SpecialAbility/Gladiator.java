@@ -148,8 +148,8 @@ public class Gladiator implements Listener {
             p.teleport(loc2);
             loc3.setYaw(75.0f);
             r.teleport(loc3);
-            p.addPotionEffect(new PotionEffect(PotionEffectType.RESISTANCE, 110, 5));
-            r.addPotionEffect(new PotionEffect(PotionEffectType.RESISTANCE, 110, 5));
+            p.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 110, 5));
+            r.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 110, 5));
             p.sendMessage(API.NomeServer + "§7You challenged "  + r.getName() + "! You have five seconds of invencibility!");
             p.sendMessage(API.NomeServer + "§7If dont have a winner in five minutes you will return to your previous location!");
             r.sendMessage(API.NomeServer + "§7You have been challenged by a gladiator! You have five seconds of invencibility!");

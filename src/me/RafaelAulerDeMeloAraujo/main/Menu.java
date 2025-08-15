@@ -679,7 +679,7 @@ if (Main.plugin.getConfig().getBoolean("PlayersRemainOnKitPvPOnLeave")) {
 	 X1.inx1.remove(p);
 	 X1.inx1.remove(p);
 	 X1.inx1.remove(p);
-	 API.darEfeito(p, PotionEffectType.SLOWNESS, 99, 6);
+	 API.darEfeito(p, PotionEffectType.SLOW, 99, 6);
 	Bukkit.getScheduler().scheduleSyncDelayedTask(Main.plugin, new Runnable()
 			{
       public void run()
@@ -773,7 +773,7 @@ if (Main.plugin.getConfig().getBoolean("PlayersRemainOnKitPvPOnLeave")) {
 /*     */ 
 /*     */ 
 /* 159 */         
-    NewKitMenu.playSound(p, Main.getInstance().getConfig().getString("Sound.CommandSounds"), 1.0F, 1.0F);  } }, 10L);
+    NewKitMenu.playSound(p, "UI_BUTTON_CLICK", 1.0F, 1.0F);  } }, 10L);
 	}
 }
 
@@ -791,7 +791,7 @@ public void onBauKit(PlayerInteractEvent e)
     if ((e.getAction() == Action.RIGHT_CLICK_AIR) || (e.getAction() == Action.RIGHT_CLICK_BLOCK))
     {
       p.openInventory(Shop.shop);
-      NewKitMenu.playSound(p, Main.getInstance().getConfig().getString("Sound.CommandSounds"), 1.0F, 1.0F);  }   	  }
+      NewKitMenu.playSound(p, "UI_BUTTON_CLICK", 1.0F, 1.0F);  }   	  }
 }
 @EventHandler
 public void onLeaveKit(PlayerInteractEvent e)

@@ -45,7 +45,7 @@ import me.RafaelAulerDeMeloAraujo.main.Main;
 	        if (percent <= Main.kits.getInt("ConfuserChance"))
 	        {
 	          entity.addPotionEffect(new PotionEffect(
-	            PotionEffectType.NAUSEA, 300, 0));
+	            PotionEffectType.CONFUSION, 300, 0));
 	          return;
 	        }
 	        return;

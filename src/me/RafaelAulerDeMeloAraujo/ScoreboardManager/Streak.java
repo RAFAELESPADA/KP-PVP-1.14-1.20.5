@@ -144,7 +144,7 @@ Bukkit.getConsoleSender().sendMessage("§e" + p.getName() + " (" +  ev.getEntityT
 }
 }
 public static void throwRandomFirework(Player p) {
-    Firework fw = (Firework) p.getWorld().spawnEntity(p.getLocation(), EntityType.FIREWORK_ROCKET);
+    Firework fw = (Firework) p.getWorld().spawnEntity(p.getLocation(), EntityType.FIREWORK);
     FireworkMeta fwm = fw.getFireworkMeta();
 
     //Our random generator
